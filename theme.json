@@ -223,5 +223,38 @@
     }
   ]
 }
+"elements": {
+  "heading": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--heading)",
+      "fontWeight": "700"
+    },
+    "color": {
+      "text": "#263238"
+    }
+  }
+}
+"button": {
+  "border": {
+    "radius": "50px"
+  },
+  "spacing": {
+    "padding": {
+      "top": "16px",
+      "bottom": "16px",
+      "left": "32px",
+      "right": "32px"
+    }
+  },
+  "color": {
+    "background": "#2E7D32",
+    "text": "#ffffff"
+  }
+}
+"image": {
+  "border": {
+    "radius": "18px"
+  }
+}
 
 
