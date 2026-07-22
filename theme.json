@@ -185,3 +185,7 @@
     }
   ]
 }
+"border": {
+  "radius": true
+}
+
