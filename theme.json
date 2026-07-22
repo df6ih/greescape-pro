@@ -54,3 +54,134 @@
     }
   }
 }
+"typography": {
+  "fluid": true,
+
+  "fontFamilies": [
+    {
+      "fontFamily": "Poppins, sans-serif",
+      "slug": "heading",
+      "name": "Poppins"
+    },
+    {
+      "fontFamily": "Inter, sans-serif",
+      "slug": "body",
+      "name": "Inter"
+    }
+  ],
+
+  "fontSizes": [
+    {
+      "slug": "xs",
+      "size": "0.875rem",
+      "name": "XS"
+    },
+    {
+      "slug": "sm",
+      "size": "1rem",
+      "name": "S"
+    },
+    {
+      "slug": "md",
+      "size": "1.125rem",
+      "name": "M"
+    },
+    {
+      "slug": "lg",
+      "size": "1.5rem",
+      "name": "L"
+    },
+    {
+      "slug": "xl",
+      "size": "2.25rem",
+      "name": "XL"
+    },
+    {
+      "slug": "xxl",
+      "size": "3.5rem",
+      "name": "XXL"
+    }
+  ]
+}
+"typography": {
+  "fluid": true,
+
+  "fontFamilies": [
+    {
+      "fontFamily": "Poppins, sans-serif",
+      "slug": "heading",
+      "name": "Poppins"
+    },
+    {
+      "fontFamily": "Inter, sans-serif",
+      "slug": "body",
+      "name": "Inter"
+    }
+  ],
+
+  "fontSizes": [
+    {
+      "slug": "xs",
+      "size": "0.875rem",
+      "name": "XS"
+    },
+    {
+      "slug": "sm",
+      "size": "1rem",
+      "name": "S"
+    },
+    {
+      "slug": "md",
+      "size": "1.125rem",
+      "name": "M"
+    },
+    {
+      "slug": "lg",
+      "size": "1.5rem",
+      "name": "L"
+    },
+    {
+      "slug": "xl",
+      "size": "2.25rem",
+      "name": "XL"
+    },
+    {
+      "slug": "xxl",
+      "size": "3.5rem",
+      "name": "XXL"
+    }
+  ]
+}
+"spacing": {
+  "spacingScale": {
+    "steps": 8
+  },
+
+  "spacingSizes": [
+    {
+      "slug":"xs",
+      "size":"8px",
+      "name":"XS"
+    },
+    {
+      "slug":"sm",
+      "size":"16px",
+      "name":"S"
+    },
+    {
+      "slug":"md",
+      "size":"24px",
+      "name":"M"
+    },
+    {
+      "slug":"lg",
+      "size":"40px",
+      "name":"L"
+    },
+    {
+      "slug":"xl",
+      "size":"64px",
+      "name":"XL"
+    }
+  ]
+}
