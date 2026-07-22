@@ -1,214 +1,30 @@
-{
-  "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "version": 3,
+<?php
 
-  "settings": {
-    "appearanceTools": true,
-    "useRootPaddingAwareAlignments": true,
-
-    "layout": {
-      "contentSize": "760px",
-      "wideSize": "1280px"
-    },
-
-    "color": {
-      "defaultPalette": false,
-      "defaultGradients": false,
-      "palette": [
-        {
-          "slug": "primary",
-          "name": "Primary Green",
-          "color": "#2E7D32"
-        },
-        {
-          "slug": "secondary",
-          "name": "Light Green",
-          "color": "#66BB6A"
-        },
-        {
-          "slug": "accent",
-          "name": "Accent",
-          "color": "#A5D6A7"
-        },
-        {
-          "slug": "gold",
-          "name": "Gold",
-          "color": "#F9A825"
-        },
-        {
-          "slug": "sand",
-          "name": "Sand",
-          "color": "#F8FAF7"
-        },
-        {
-          "slug": "dark",
-          "name": "Dark",
-          "color": "#263238"
-        },
-        {
-          "slug": "white",
-          "name": "White",
-          "color": "#FFFFFF"
-        }
-      ]
-    }
-  }
-}
-"typography": {
-  "fluid": true,
-
-  "fontFamilies": [
-    {
-      "fontFamily": "Poppins, sans-serif",
-      "slug": "heading",
-      "name": "Poppins"
-    },
-    {
-      "fontFamily": "Inter, sans-serif",
-      "slug": "body",
-      "name": "Inter"
-    }
-  ],
-
-  "fontSizes": [
-    {
-      "slug": "xs",
-      "size": "0.875rem",
-      "name": "XS"
-    },
-    {
-      "slug": "sm",
-      "size": "1rem",
-      "name": "S"
-    },
-    {
-      "slug": "md",
-      "size": "1.125rem",
-      "name": "M"
-    },
-    {
-      "slug": "lg",
-      "size": "1.5rem",
-      "name": "L"
-    },
-    {
-      "slug": "xl",
-      "size": "2.25rem",
-      "name": "XL"
-    },
-    {
-      "slug": "xxl",
-      "size": "3.5rem",
-      "name": "XXL"
-    }
-  ]
-}
-"spacing": {
-  "spacingScale": {
-    "steps": 8
-  },
-
-  "spacingSizes": [
-    {
-      "slug":"xs",
-      "size":"8px",
-      "name":"XS"
-    },
-    {
-      "slug":"sm",
-      "size":"16px",
-      "name":"S"
-    },
-    {
-      "slug":"md",
-      "size":"24px",
-      "name":"M"
-    },
-    {
-      "slug":"lg",
-      "size":"40px",
-      "name":"L"
-    },
-    {
-      "slug":"xl",
-      "size":"64px",
-      "name":"XL"
-    }
-  ]
-}
-"border": {
-  "radius": true
-}
-"shadow": {
-  "defaultPresets": false,
-  "presets": [
-    {
-      "slug": "small",
-      "name": "Small",
-      "shadow": "0 2px 6px rgba(0,0,0,.08)"
-    },
-    {
-      "slug": "medium",
-      "name": "Medium",
-      "shadow": "0 10px 30px rgba(0,0,0,.12)"
-    },
-    {
-      "slug": "large",
-      "name": "Large",
-      "shadow": "0 20px 60px rgba(0,0,0,.18)"
-    }
-  ]
-}
-"styles": {
-  "color": {
-    "background": "#F8FAF7",
-    "text": "#263238"
-  },
-
-  "spacing": {
-    "blockGap": "32px"
-  },
-
-  "typography": {
-    "fontFamily": "var(--wp--preset--font-family--body)",
-    "lineHeight": "1.7"
-  }
-}
-"styles": {
-  "color": {
-    "background": "#F8FAF7",
-    "text": "#263238"
-  },
-
-  "spacing": {
-    "blockGap": "32px"
-  },
-
-  "typography": {
-    "fontFamily": "var(--wp--preset--font-family--body)",
-    "lineHeight": "1.7"
-  }
-}
-"button": {
-  "border": {
-    "radius": "50px"
-  },
-  "spacing": {
-    "padding": {
-      "top": "16px",
-      "bottom": "16px",
-      "left": "32px",
-      "right": "32px"
-    }
-  },
-  "color": {
-    "background": "#2E7D32",
-    "text": "#ffffff"
-  }
-}
-"image": {
-  "border": {
-    "radius": "18px"
-  }
+if (!defined('ABSPATH')) {
+    exit;
 }
 
+function greenscape_setup() {
+
+    add_theme_support('wp-block-styles');
+    add_theme_support('responsive-embeds');
+    add_theme_support('editor-styles');
+    add_theme_support('align-wide');
+
+}
+
+add_action('after_setup_theme', 'greenscape_setup');
+
+
+function greenscape_styles() {
+
+    wp_enqueue_style(
+        'greenscape-style',
+        get_stylesheet_uri(),
+        [],
+        wp_get_theme()->get('Version')
+    );
+
+}
+
+add_action('wp_enqueue_scripts', 'greenscape_styles');
